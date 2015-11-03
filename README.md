@@ -87,8 +87,8 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
  1. The LCD will let us display two lines of 16 characters.  It communicates with the Edison board via the [I2C protocol](http://en.wikipedia.org/wiki/I%C2%B2C).  Connect the LCD board up to one of the I2C sockets with a ribbon cable.
  1. Communicating with the LCD has been abstracted into the rgb_lcd library, so you don't need to worry about using the I2C protocol directly (although that would just need you to read through the datasheet for the LCD to work out what commands to send it).  Open the LCD sketch.  File -> Sketchbook -> IntroExamples -> 04. LCD -> LCD.
- 1. The sketch uses the `system`, `fopen`, `fgets` and `fclose` to access the time from the Linux side of the Edison, and then displays it on the LCD.  Upload the sketch to your Edison and you'll have a rather over-engineered electronic clock.\
-    Note that if the time displayed is not correct, you can open a serial terminal connection to your Edison and type `rdate wwv.nist.gov`
+ 1. The sketch uses the `system`, `fopen`, `fgets` and `fclose` to access the time from the Linux side of the Edison, and then displays it on the LCD.  Upload the sketch to your Edison and you'll have a rather over-engineered electronic clock.
+    Note that if the time displayed is not correct, you can open a serial terminal connection to your Edison and type `rdate wwv.nist.gov` (Note the wwv is not a typo!)
  
 > <strong>Extra credit:</strong> Modify the sketch so that the screen backlight turns green when it's lunchtime or hometime.
 

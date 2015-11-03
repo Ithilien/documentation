@@ -182,23 +182,28 @@ int downloadForecast()
     Serial.println("startedRequest ok");
 
     err = http.responseStatusCode();
+    Serial.print(".");
     if (err >= 200 && err < 300)
     {
       // It's a 2xx response code, which is a success
       err = http.skipResponseHeaders();
+      Serial.print(".");
       
       if (err >= 0)
       {
+        Serial.print(".");
         // Now we're into the data being returned.  We need to search
         // through it for the bits of the forecast we're interested in
         if (http.find("Day"))
         {
+          Serial.print(".");
           // We've skipped past all the stuff at the start we don't care about
 
           // Now look for the first part we want to check - the chance of rain.
           // That's marked as "Pp" in the forecast information
           if (http.find("Pp"))
           {
+            Serial.println(".");
             // We've found the first "% chance of rain" reading
             // Read in the value for it
             chanceOfRain = http.parseInt();
