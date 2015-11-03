@@ -96,10 +96,10 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. Open the WebClient sketch (File -> Sketchbook -> IntroExamples -> 05. WebClient-> WebClient).
  1. We need to tell it the details of the WiFi network we want to connect to.  Find the lines
  
-```
-char ssid[] = "yourNetwork";      //  your network SSID (name) 
-char pass[] = "secretPassword";   // your network password
-```
+ ```
+ char ssid[] = "yourNetwork";      //  your network SSID (name) 
+ char pass[] = "secretPassword";   // your network password
+ ```
 
     And change them to match the network and password for the venue's WiFi.
  1. Upload the sketch to your Edison, then open the serial monitor.
