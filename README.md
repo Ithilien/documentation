@@ -38,8 +38,10 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
     Be sure to select the Arduino IDE as your development environment.  Your Edison boards have already been flashed with the latest image, so you don't need to worry about that.
 
  1. In the Arduino IDE, open File -> Preferences.  Make a note of the sketchbook location (it's most likely to be an Arduino folder in your home directory)
- 1. Copy the contents of the Sketchbook folder in the zip file you unpacked in step 1 into the sketchbook location on your machine.
- 1. Restart the Arduino IDE so it spots the new files.  Once done you will have a new set of sketches available in the File -> Sketchbook menu, called EdisonExamples.
+ 1. Copy the entire IntroExamples folder (from the zip file you unpacked in step 1) into the sketchbook location on your machine.
+ 1. Install the libraries from the Libraries folder (from the zip file you unpacked in step 1) by going to Sketch -> Include Library -> Add ZIP Library and selecting one of the zip files from the Libraries folder. Do this for each zip file.
+ 1. Be sure you have the Intel Edison board selected (Tools -> Board: Intel Edison). If not, select the Edison board from the list. If it does not appear on the list, open the Boards Manager (Tools -> Board: ... -> Boards Manager...) and find the Intel i686 Boards on the list, select it and hit Install. Be sure to also select the correct port for your Edison board (Tools -> Port).
+ 1. Restart the Arduino IDE so it applies all the changes.  Once done you will have a new set of sketches available in the File -> Sketchbook menu, called IntroExamples, and all the needed libraries and board configuration should be available.
  1. Open up your Grove Starter Kit Plus.  This has a number of basic input and output electronics, which can easily be hooked up to your Edison via the supplied ribbon cables (the black/red/white/yellow wires) and the Grove shield.
  1. The shield is the circuit board with a grid of white connectors hiding under the LCD display.  Take it out and carefully but firmly push it onto the black headers on your Edison breakout board.  It will only fit one way round, so check you've got everything lined up before forcing it.
  
