@@ -47,7 +47,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  
  1. Find the LED socket board, an LED, and a ribbon cable from your Grove kit.  Place the LED into the socket on the board (the longer leg of the LED goes into the hole marked +) and connect it with a ribbon cable to one of the sockets on the shield labelled with a D.  For example, D3.
     The sockets labelled with D are for digital inputs and outputs - things that are either on or off.  Those labelled with A are for analogue inputs - things that can vary.  We'll come to the analogue inputs shortly.
- 1. To have the LED you just wired up do anything you need to tell your code to use it.  Open the code for the Blink example in the Arduino IDE (File -> Sketchbook -> IntroExamples -> 01. Blink -> Blink. Find the following line in the example code:
+ 1. To have the LED you just wired up do anything you need to tell your code to use it.  Open the code for the Blink example in the Arduino IDE (File -> Sketchbook -> IntroExamples -> 01. Blink -> Blink). Find the following line in the example code:
  
  ```
    const int led = 13;
@@ -75,7 +75,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. Find the small bag of servo horns - white disc and rods.  Choose one and attach it to the servo.
  1. Connect the servo to the socket D3 (Leave the rotary angle sensor connected to A0 from the preivous section).
  1. Because the servo draws a bit more current than the LED we've used so far, we need to provide some extra power to the Edison board.  Plug in an external power supply to the black barrel jack in the corner of the board.
- 1. Open the Servo sketch.  File -> Sketchbook -> IntroExamples -> 03. Servo -> Servo
+ 1. Open the Servo sketch (File -> Sketchbook -> IntroExamples -> 03. Servo -> Servo).
  1. Upload it to your Edison.
  1. Use the control on the rotary angle sensor to move the servo position.
 
@@ -91,7 +91,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 ## Downloading a web page
 
- 1. Open the WebClient sketch.  File -> Sketchbook -> IntroExamples -> 05. WebClient-> WebClient.
+ 1. Open the WebClient sketch (File -> Sketchbook -> IntroExamples -> 05. WebClient-> WebClient).
  1. We need to tell it the details of the WiFi network we want to connect to.  Find the lines
 ```
 char ssid[] = "yourNetwork";      //  your network SSID (name) 
@@ -105,7 +105,7 @@ char pass[] = "secretPassword";   // your network password
 
 ## Being a web server
 
- 1. Open the WebServer sketch.  File -> Sketchbook -> IntroExamples -> 06. WebServer -> WebServer.
+ 1. Open the WebServer sketch (File -> Sketchbook -> IntroExamples -> 06. WebServer -> WebServer).
  1. Connect the light sensor to socket A0.
  1. Connect the temperature sensor to socket A1.
  1. Find the `ssid` and `pass` lines in the sketch, and update them to the relevant WiFi network.
@@ -117,7 +117,7 @@ char pass[] = "secretPassword";   // your network password
 
 ## Scraping web pages and talking to APIs
 
- 1. Next we'll use the Met Office API to download the weather forecast and extract some details from it.  Open the WebScraping sketch: File -> Sketchbook -> IntroExamples -> 07. WebScraping -> WebScraping.
+ 1. Next we'll use the Met Office API to download the weather forecast and extract some details from it.  Open the WebScraping sketch (File -> Sketchbook -> IntroExamples -> 07. WebScraping -> WebScraping).
  1. Find the `ssid` and `pass` lines in the sketch, and update them to the relevant WiFi network.
  1. Connect the servo to socket D3.  The sketch will download a web page from the Met Office's server, in a similar way to the simple web client earlier.  However, rather than print out the downloaded page it uses `find` call to search through the response and `parseInt` to convert the text into values that can be used to show the conditions forecast by using the servo as a pointer.
  1. Upload the sketch to your Edison, then open the serial monitor.
@@ -134,7 +134,7 @@ char pass[] = "secretPassword";   // your network password
  1. Click on your account name (next to "IoT Analytics" in the bar across the top) and click the eye icon to show your Activation Code.
  1. Back in the Edison console, type `iotkit-admin activate <activation code>`, replacing `<activation code>` with the code from your IoTKit account.
  1. Now you're ready to start pushing data to IoTKit, so start the IoTKit agent by typing `systemctl start iotkit-agent`.
- 1. Open File -> Sketchbook -> IntroExamples -> 08. IoTAnalytics -> IoTAnalytics.
+ 1. Open the IoTAnalytics example (File -> Sketchbook -> IntroExamples -> 08. IoTAnalytics -> IoTAnalytics).
  1. Find the `ssid` and `pass` lines in the sketch, and update them to the relevant WiFi network.
  1. Connect the temperature sensor to socket A0.
  1. Upload the sketch to your Edison.
