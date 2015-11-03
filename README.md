@@ -52,7 +52,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. To have the LED you just wired up do anything you need to tell your code to use it.  Open the code for the Blink example in the Arduino IDE (File -> Sketchbook -> IntroExamples -> 01. Blink -> Blink). Find the following line in the example code:
  
  ```
-   const int led = 13;
+ const int led = 13;
  ```
  
     Replace the `13` with the number of the D socket in which you plugged in the LED. For example, if you plugged the LED into socket D3, replace the `13` with `3`.
@@ -75,7 +75,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
  1. Here we'll bring together both input and output in a single example.  Find the servo in your Grove kit.  It's a small black box with a ribbon cable attached.
  1. Find the small bag of servo horns - white disc and rods.  Choose one and attach it to the servo.
- 1. Connect the servo to the socket D3 (Leave the rotary angle sensor connected to A0 from the preivous section).
+ 1. Connect the servo to the socket D3 (Leave the rotary angle sensor connected to A0 from the previous section).
  1. Because the servo draws a bit more current than the LED we've used so far, we need to provide some extra power to the Edison board.  Plug in an external power supply to the black barrel jack in the corner of the board.
  1. Open the Servo sketch (File -> Sketchbook -> IntroExamples -> 03. Servo -> Servo).
  1. Upload it to your Edison.
