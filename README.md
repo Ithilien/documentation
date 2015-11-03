@@ -48,9 +48,11 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. Find the LED socket board, an LED, and a ribbon cable from your Grove kit.  Place the LED into the socket on the board (the longer leg of the LED goes into the hole marked +) and connect it with a ribbon cable to one of the sockets on the shield labelled with a D.  For example, D3.
     The sockets labelled with D are for digital inputs and outputs - things that are either on or off.  Those labelled with A are for analogue inputs - things that can vary.  We'll come to the analogue inputs shortly.
  1. To have the LED you just wired up do anything you need to tell your code to use it.  Open the code for the Blink example in the Arduino IDE (File -> Sketchbook -> IntroExamples -> 01. Blink -> Blink. Find the following line in the example code:
+ 
  ```
    const int led = 13;
  ```
+ 
     Replace the `13` with the number of the D socket in which you plugged in the LED. For example, if you plugged the LED into socket D3, replace the `13` with `3`.
  1. Upload your modified code to your Edison and the LED should start blinking.
 
