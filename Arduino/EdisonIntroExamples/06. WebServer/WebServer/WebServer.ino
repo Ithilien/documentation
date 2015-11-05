@@ -20,8 +20,8 @@
 #include <SPI.h>        //Used to communicate with the ethernet chip
 #include <WiFi.h>   //Used to interface with the ethernet portion
 
-char ssid[] = "DoESLiverpool"; //  your network SSID (name) 
-char pass[] = "decafbad00";    // your network password (use for WPA, or use as key for WEP)
+char ssid[] = "mynetwork"; //  your network SSID (name) 
+char pass[] = "mypassword";    // your network password (use for WPA, or use as key for WEP)
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
 
 int status = WL_IDLE_STATUS;
