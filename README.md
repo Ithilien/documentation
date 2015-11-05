@@ -29,12 +29,13 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 ## Getting set up
 
+> <string>Note:</strong> Read through the entire step before following its instructions; there might be some important details later on for how to perform that step!
+
  1. Download the files from this page by clicking the "Download ZIP" to the right of these instructions.  Once it's downloaded, unzip it (it doesn't matter where to, but somewhere you can find it again - for example, to your Desktop)
- 1. While that downloads we'll unbox the goodies.
- 1. Next we'll follow the steps to connect your Edison board and install the software, only follow steps 1-3:
+ 1. Unbox your Edison and follow the steps to connect your Edison board and install the software, only follow steps 1-3:
     https://software.intel.com/en-us/iot/library/edison-getting-started
     
-    Be sure to select the Arduino IDE as your development environment.  Your Edison boards have already been flashed with the latest image, so you don't need to worry about that.
+    Don't worry about screwing everything in and be sure to select the Arduino IDE as your development environment.  Your Edison boards have already been flashed with the latest image, so you don't need to worry about that.
 
  1. In the Arduino IDE, open File -> Preferences.  Make a note of the sketchbook location (it's most likely to be an Arduino folder in your home directory)
  1. Copy the entire IntroExamples folder (from the zip file you unpacked in step 1) into the sketchbook location on your machine.
