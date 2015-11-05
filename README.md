@@ -143,7 +143,6 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  * [Edison Arduino expansion board hardware guide](https://communities.intel.com/docs/DOC-23161) - includes details of the jumper settings, pin-out diagram, etc. for the expansion board
  * [Intel IoTKit sample code](https://github.com/enableiot/iotkit-samples)
  * [Intel IoT Developer Zone](https://software.intel.com/en-us/iot)
- * [Met Office API reference](http://www.metoffice.gov.uk/datapoint/support/api-reference)
  * [Edison community forum](https://communities.intel.com/community/makers/edison)
 
 And if you want to skip the Arduino IDE and play around with Node.js or Python and the Edison then these links might help
