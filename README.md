@@ -29,7 +29,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 ## Getting set up
 
-> <string>Note:</strong> Read through the entire step before following its instructions; there might be some important details later on for how to perform that step!
+> <strong>Note:</strong> Read through the entire step before following its instructions; there might be some important details later on for how to perform that step!
 
  1. Download the files from this page by clicking the "Download ZIP" to the right of these instructions.  Once it's downloaded, unzip it (it doesn't matter where to, but somewhere you can find it again - for example, to your Desktop)
  1. Unbox your Edison and follow the steps to connect your Edison board and install the software, only follow steps 1-3:
