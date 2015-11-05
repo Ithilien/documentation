@@ -24,7 +24,6 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  * 14:15 Getting the "I" in IoT going
   - Downloading a web page
   - Being a web server
-  - Scraping web pages and talking to APIs
   - Publishing sensor data to the Internet
  * ??:?? Done for the day
 
@@ -120,16 +119,6 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 > <strong>Note:</strong> The Edison board already has a web server running on it, which is why your web server URL ends in ":8080".  That tells your browser to look for the web server on port 8080 rather than the default port 80.  If you try removing the ":8080" you'll see the Edison's default web server page.
 
-## Scraping web pages and talking to APIs
-
- 1. Next we'll use the Met Office API to download the weather forecast and extract some details from it.  Open the WebScraping sketch (File -> Sketchbook -> IntroExamples -> 07. WebScraping -> WebScraping).
- 1. Find the `ssid` and `pass` lines in the sketch, and update them to the relevant WiFi network.
- 1. Connect the servo to socket D3.  The sketch will download a web page from the Met Office's server, in a similar way to the simple web client earlier.  However, rather than print out the downloaded page it uses `find` call to search through the response and `parseInt` to convert the text into values that can be used to show the conditions forecast by using the servo as a pointer.
- 1. Upload the sketch to your Edison, then open the serial monitor.
- 1. Once connected to the WiFi, your Edison will output some of the forecast details as it parses the results, and then will move the servo to point to one of six different weather types.
-
-> <strong>Extra credit:</strong> Change the code to show the forecast temperature on the servo.  Modify the URL requested to get the forecast for your home town (rather than Liverpool, the current default).
-
 ## Publishing sensor data to the Internet
 
  1. Intel have a service called IoTKit which lets you store and graph simple sensor data.  Go to the [IoTKit website](https://dashboard.us.enableiot.com/) and create an account so that you can use it.
@@ -139,7 +128,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. Click on your account name (next to "IoT Analytics" in the bar across the top) and click the eye icon to show your Activation Code.
  1. Back in the Edison console, type `iotkit-admin activate <activation code>`, replacing `<activation code>` with the code from your IoTKit account.
  1. Now you're ready to start pushing data to IoTKit, so start the IoTKit agent by typing `systemctl start iotkit-agent`.
- 1. Open the IoTAnalytics example (File -> Sketchbook -> IntroExamples -> 08. IoTAnalytics -> IoTAnalytics).
+ 1. Open the IoTAnalytics example (File -> Sketchbook -> IntroExamples -> 07. IoTAnalytics -> IoTAnalytics).
  1. Find the `ssid` and `pass` lines in the sketch, and update them to the relevant WiFi network.
  1. Connect the temperature sensor to socket A0.
  1. Upload the sketch to your Edison.
