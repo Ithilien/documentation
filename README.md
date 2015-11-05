@@ -31,16 +31,17 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 > <strong>Note:</strong> Read through the entire step before following its instructions; there might be some important details later on for how to perform that step!
 
- 1. Download the files from this page by clicking the "Download ZIP" to the right of these instructions.  Once it's downloaded, unzip it (it doesn't matter where to, but somewhere you can find it again - for example, to your Desktop)
- 1. Unbox your Edison and follow the steps to connect your Edison board and install the software, only follow steps 1-3:
-    https://software.intel.com/en-us/iot/library/edison-getting-started
+ 1. If you don't already have the Arduino IDE installed (version 1.6.1 or greater), go to https://www.arduino.cc/en/Main/Software and install the latest version.
+ 1. Open the Arduino IDE and check the boards list (Tools -> Board: ...) to be sure Intel Edison is on the list.  If not, open the Boards Manager (Tools -> Board: ... -> Boards Manager...) and find the Intel i686 Boards on the list, select it and hit Install.
+ 1. Below is a link to set up your Edison board. Follow along Step 1 and select your OS in Step 2.  However, do NOT download the installer. The installer linked on this step contains several tools (such as a firmware flasher) that you don't need for this tutorial, the Arduino IDE is plenty good.  If you want to get these extra tools, feel free to download this installer later.  Move on to Step 3, which is the last step from the instructions page you need to follow.
     
-    Don't worry about screwing everything in and be sure to select the Arduino IDE as your development environment.  Your Edison boards have already been flashed with the latest image, so you don't need to worry about that.
-
- 1. In the Arduino IDE, open File -> Preferences.  Make a note of the sketchbook location (it's most likely to be an Arduino folder in your home directory)
+    https://software.intel.com/en-us/iot/library/edison-getting-started
+     
+ 1. Download the files from this page by clicking the "Download ZIP" to the right of these instructions.  Once it's downloaded, unzip it (it doesn't matter where to, but somewhere you can find it again - for example, to your Desktop)
+ 1. In the Arduino IDE, open File -> Preferences.  Make a note of the sketchbook location (it's most likely to be an Arduino folder in your home directory).
  1. Copy the entire EdisonIntroExamples folder (from the zip file you unpacked in step 1) into the sketchbook location on your machine.
  1. Install the libraries from the Libraries folder (from the zip file you unpacked in step 1) by going to Sketch -> Include Library -> Add ZIP Library and selecting one of the zip files from the Libraries folder. Do this for each zip file.
- 1. Be sure you have the Intel Edison board selected (Tools -> Board: Intel Edison). If not, select the Edison board from the list. If it does not appear on the list, open the Boards Manager (Tools -> Board: ... -> Boards Manager...) and find the Intel i686 Boards on the list, select it and hit Install. Be sure to also select the correct port for your Edison board (Tools -> Port).
+ 1. Be sure you have the Intel Edison board selected (Tools -> Board: Intel Edison). If not, select the Edison board from the list.  Be sure to also select the correct port for your Edison board (Tools -> Port).
  1. Restart the Arduino IDE so it applies all the changes.  Once done you will have a new set of sketches available in the File -> Sketchbook menu, called EdisonIntroExamples, and all the needed libraries and board configuration should be available.
  1. Open up your Grove Starter Kit Plus.  This has a number of basic input and output electronics, which can easily be hooked up to your Edison via the supplied ribbon cables (the black/red/white/yellow wires) and the Grove shield.
  1. The shield is the circuit board with a grid of white connectors hiding under the LCD display.  Take it out and carefully but firmly push it onto the black headers on your Edison breakout board.  It will only fit one way round, so check you've got everything lined up before forcing it.
