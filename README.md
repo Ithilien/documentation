@@ -20,7 +20,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
   - Hooking up sensors
   - Controlling a servo
   - Using the LCD
- * 13:00 Break?/ Lunch?
+ * 13:15 Lunch break
  * 14:15 Getting the "I" in IoT going
   - Downloading a web page
   - Being a web server
@@ -38,10 +38,10 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
     Don't worry about screwing everything in and be sure to select the Arduino IDE as your development environment.  Your Edison boards have already been flashed with the latest image, so you don't need to worry about that.
 
  1. In the Arduino IDE, open File -> Preferences.  Make a note of the sketchbook location (it's most likely to be an Arduino folder in your home directory)
- 1. Copy the entire IntroExamples folder (from the zip file you unpacked in step 1) into the sketchbook location on your machine.
+ 1. Copy the entire EdisonIntroExamples folder (from the zip file you unpacked in step 1) into the sketchbook location on your machine.
  1. Install the libraries from the Libraries folder (from the zip file you unpacked in step 1) by going to Sketch -> Include Library -> Add ZIP Library and selecting one of the zip files from the Libraries folder. Do this for each zip file.
  1. Be sure you have the Intel Edison board selected (Tools -> Board: Intel Edison). If not, select the Edison board from the list. If it does not appear on the list, open the Boards Manager (Tools -> Board: ... -> Boards Manager...) and find the Intel i686 Boards on the list, select it and hit Install. Be sure to also select the correct port for your Edison board (Tools -> Port).
- 1. Restart the Arduino IDE so it applies all the changes.  Once done you will have a new set of sketches available in the File -> Sketchbook menu, called IntroExamples, and all the needed libraries and board configuration should be available.
+ 1. Restart the Arduino IDE so it applies all the changes.  Once done you will have a new set of sketches available in the File -> Sketchbook menu, called EdisonIntroExamples, and all the needed libraries and board configuration should be available.
  1. Open up your Grove Starter Kit Plus.  This has a number of basic input and output electronics, which can easily be hooked up to your Edison via the supplied ribbon cables (the black/red/white/yellow wires) and the Grove shield.
  1. The shield is the circuit board with a grid of white connectors hiding under the LCD display.  Take it out and carefully but firmly push it onto the black headers on your Edison breakout board.  It will only fit one way round, so check you've got everything lined up before forcing it.
  
@@ -49,7 +49,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  
  1. Find the LED socket board, an LED, and a ribbon cable from your Grove kit.  Place the LED into the socket on the board (the longer leg of the LED goes into the hole marked +) and connect it with a ribbon cable to one of the sockets on the shield labelled with a D.  For example, D3.
     The sockets labelled with D are for digital inputs and outputs - things that are either on or off.  Those labelled with A are for analogue inputs - things that can vary.  We'll come to the analogue inputs shortly.
- 1. To have the LED you just wired up do anything you need to tell your code to use it.  Open the code for the Blink example in the Arduino IDE (File -> Sketchbook -> IntroExamples -> 01. Blink -> Blink). Find the following line in the example code:
+ 1. To have the LED you just wired up do anything you need to tell your code to use it.  Open the code for the Blink example in the Arduino IDE (File -> Sketchbook -> EdisonIntroExamples -> 01. Blink -> Blink). Find the following line in the example code:
  
  ```
  const int led = 13;
@@ -64,7 +64,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
  1. Now let's look at some inputs.  The Grove kit has a few different ones - the button and touch sensor are digital inputs, which can only be on or off.  We're going to look at the rotary angle, temperature and light sensors.  These turn what they measure into a voltage that varies between 0 and 5 volts.  The analogue input sockets (and associated analogRead code) let you read these values on your Edison.  Find the rotary angle sensor and a ribbon cable.
  1. Connect it up to the A0 socket
- 1. Open the Sensor example in the Arduino IDE (File -> Sketchbook -> IntroExamples -> 02. Sensor -> Sensor).
+ 1. Open the Sensor example in the Arduino IDE (File -> Sketchbook -> EdisonIntroExamples -> 02. Sensor -> Sensor).
  1. As you'll see in the `loop` function, this uses `analogRead` to read in the value of the sensor and then prints it out to the serial port.  The values will range from 0 to 1023, with 0 corresponding to 0V and 1023 to 5V.  Upload the sketch to your Edison.
  1. Now open the serial monitor in the Arduino IDE - the little magnifying glass icon in the top right corner.  This will open a new window and start printing out a stream of numbers as the Edison takes readings and reports them.
  1. Twisting the control on the rotary angle sensor (or potentiometer, as they're known in electronics circles) and you'll see the value changing.
@@ -77,7 +77,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. Find the small bag of servo horns - white disc and rods.  Choose one and attach it to the servo.
  1. Connect the servo to the socket D3 (Leave the rotary angle sensor connected to A0 from the previous section).
  1. Because the servo draws a bit more current than the LED we've used so far, we need to provide some extra power to the Edison board.  Plug in an external power supply to the black barrel jack in the corner of the board.
- 1. Open the Servo sketch (File -> Sketchbook -> IntroExamples -> 03. Servo -> Servo).
+ 1. Open the Servo sketch (File -> Sketchbook -> EdisonIntroExamples -> 03. Servo -> Servo).
  1. Upload it to your Edison.
  1. Use the control on the rotary angle sensor to move the servo position.
 
@@ -86,7 +86,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 ## Using the LCD
 
  1. The LCD will let us display two lines of 16 characters.  It communicates with the Edison board via the [I2C protocol](http://en.wikipedia.org/wiki/I%C2%B2C).  Connect the LCD board up to one of the I2C sockets with a ribbon cable.
- 1. Communicating with the LCD has been abstracted into the rgb_lcd library, so you don't need to worry about using the I2C protocol directly (although that would just need you to read through the datasheet for the LCD to work out what commands to send it).  Open the LCD sketch.  File -> Sketchbook -> IntroExamples -> 04. LCD -> LCD.
+ 1. Communicating with the LCD has been abstracted into the rgb_lcd library, so you don't need to worry about using the I2C protocol directly (although that would just need you to read through the datasheet for the LCD to work out what commands to send it).  Open the LCD sketch.  File -> Sketchbook -> EdisonIntroExamples -> 04. LCD -> LCD.
  1. The sketch uses the `system`, `fopen`, `fgets` and `fclose` to access the time from the Linux side of the Edison, and then displays it on the LCD.  Upload the sketch to your Edison and you'll have a rather over-engineered electronic clock.
     Note that if the time displayed is not correct, you can open a serial terminal connection to your Edison and type `rdate wwv.nist.gov` (Note the wwv is not a typo!)
  
@@ -94,7 +94,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 ## Downloading a web page
 
- 1. Open the WebClient sketch (File -> Sketchbook -> IntroExamples -> 05. WebClient-> WebClient).
+ 1. Open the WebClient sketch (File -> Sketchbook -> EdisonIntroExamples -> 05. WebClient-> WebClient).
  1. We need to tell it the details of the WiFi network we want to connect to.  Find the lines
  
  ```
@@ -110,7 +110,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 ## Being a web server
 
- 1. Open the WebServer sketch (File -> Sketchbook -> IntroExamples -> 06. WebServer -> WebServer).
+ 1. Open the WebServer sketch (File -> Sketchbook -> EdisonIntroExamples -> 06. WebServer -> WebServer).
  1. Connect the light sensor to socket A0.
  1. Connect the temperature sensor to socket A1.
  1. Find the `ssid` and `pass` lines in the sketch, and update them to the relevant WiFi network.
@@ -129,7 +129,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. Click on your account name (next to "IoT Analytics" in the bar across the top) and click the eye icon to show your Activation Code.
  1. Back in the Edison console, type `iotkit-admin activate <activation code>`, replacing `<activation code>` with the code from your IoTKit account.
  1. Now you're ready to start pushing data to IoTKit, so start the IoTKit agent by typing `systemctl start iotkit-agent`.
- 1. Open the IoTAnalytics example (File -> Sketchbook -> IntroExamples -> 07. IoTAnalytics -> IoTAnalytics).
+ 1. Open the IoTAnalytics example (File -> Sketchbook -> EdisonIntroExamples -> 07. IoTAnalytics -> IoTAnalytics).
  1. Find the `ssid` and `pass` lines in the sketch, and update them to the relevant WiFi network.
  1. Connect the temperature sensor to socket A0.
  1. Upload the sketch to your Edison.
