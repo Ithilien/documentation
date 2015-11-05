@@ -5,7 +5,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 ## Repository contents
 
   * Arduino
-   - IntroExample - All the examples used in this intro
+   - EdisonIntroExamples - All the examples used in this intro
    - Libraries - Some libraries used in the examples that are not included in the default install of the Arduino IDE
   * README.md - This guide
 
