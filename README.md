@@ -33,7 +33,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
  1. If you don't already have the Arduino IDE installed (version 1.6.1 or greater), go to https://www.arduino.cc/en/Main/Software and install the latest version.
  1. Open the Arduino IDE and check the boards list (Tools -> Board: ...) to be sure Intel Edison is on the list.  If not, open the Boards Manager (Tools -> Board: ... -> Boards Manager...) and find the Intel i686 Boards on the list, select it and hit Install.
- 1. Below is a link to set up your Edison board. Follow along Step 1 and select your OS in Step 2.  However, do NOT download the installer. The installer linked on this step contains several tools (such as a firmware flasher) that you don't need for this tutorial, the Arduino IDE is plenty good.  If you want to get these extra tools, feel free to download this installer later.  Move on to Step 3, which is the last step from the instructions page you need to follow.
+ 1. Below is a link to set up your Edison board. Follow along Step 1 and select your OS in Step 2.  In Step 2, download the installer and be sure to select only the Drivers and the Intel PhoneFlash Tool (top two items) when presented with the list of things to install.  Once this completes, move on to Step 3, which is the last step from the instructions page you need to follow.
     
     https://software.intel.com/en-us/iot/library/edison-getting-started
      
