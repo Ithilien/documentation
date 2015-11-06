@@ -31,7 +31,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
 
 > <strong>Note:</strong> Read through the entire step before following its instructions; there might be some important details later on for how to perform that step!
 
- 1. If you don't already have the Arduino IDE installed (version 1.6.1 or greater), go to https://www.arduino.cc/en/Main/Software and install the latest version.
+ 1. If you don't already have the Arduino IDE installed (version 1.6.2 or greater), go to https://www.arduino.cc/en/Main/Software and install the latest version.
  1. Open the Arduino IDE and check the boards list (Tools -> Board: ...) to be sure Intel Edison is on the list.  If not, open the Boards Manager (Tools -> Board: ... -> Boards Manager...) and find the Intel i686 Boards on the list, select it and hit Install.
  1. Below is a link to set up your Edison board. Follow along Step 1 and select your OS in Step 2.  In Step 2, download the installer and be sure to select only the Drivers and the Intel PhoneFlash Tool (top two items) when presented with the list of things to install.  Once this completes, move on to Step 3, which is the last step from the instructions page you need to follow.
     
@@ -67,7 +67,7 @@ This repo contains all the instruction and needed code for the RCA IoT Tech Intr
  1. Connect it up to the A0 socket
  1. Open the Sensor example in the Arduino IDE (File -> Sketchbook -> EdisonIntroExamples -> 02. Sensor -> Sensor).
  1. As you'll see in the `loop` function, this uses `analogRead` to read in the value of the sensor and then prints it out to the serial port.  The values will range from 0 to 1023, with 0 corresponding to 0V and 1023 to 5V.  Upload the sketch to your Edison.
- 1. Now open the serial monitor in the Arduino IDE - the little magnifying glass icon in the top right corner.  This will open a new window and start printing out a stream of numbers as the Edison takes readings and reports them.
+ 1. Now open the serial monitor in the Arduino IDE - the little magnifying glass icon in the top right corner.  This will open a new window and start printing out a stream of numbers as the Edison takes readings and reports them. If you aren't getting any messages, be sure you have the proper serial port selected (Tools -> Port) and have the serial settings (pull down menus in the lower right of the monitor window) set to '9600 baud' and 'No line ending'.
  1. Twisting the control on the rotary angle sensor (or potentiometer, as they're known in electronics circles) and you'll see the value changing.
 
 > <strong>Extra credit:</strong> Try plugging in the other sensors and see what range of numbers they report.

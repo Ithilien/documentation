@@ -11,27 +11,22 @@
 
 #include <SPI.h>         
 #include <WiFi.h>
-#include <WiFiUdp.h>
+#include <IoTkit.h>    // include IoTkit.h to use the Intel IoT Kit
+#include <Ethernet.h>  // must be included to use IoTkit
 
 int status = WL_IDLE_STATUS;
 char ssid[] = "mynetwork";  //  your network SSID (name)
 char pass[] = "mypassword";       // your network password
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
 
-unsigned int localPort = 1234;      // local port to listen for UDP packets
-
-const int PACKET_BUFFER_SIZE = 255;
-
-char packetBuffer[PACKET_BUFFER_SIZE]; //buffer to hold incoming and outgoing packets 
-
 const int pinTemp = A0;      // pin of temperature sensor
+
+IoTkit iotkit; // IoTkit object, for talking to enableiot.com
 
 float temperature;
 int B=3975;                  // B value of the thermistor
 float resistance;
 
-// A UDP instance to let us send and receive packets over UDP
-WiFiUDP Udp;
 
 void setup() 
 {
@@ -66,12 +61,12 @@ void setup()
   Serial.println("Connected to wifi");
   printWifiStatus();
 
-  Udp.begin(localPort);
+  Serial.println("Initializing iotkit");
+  iotkit.begin();
   
   // First off we need to register the type of sensor
   Serial.println("Registering sensor");
-  sprintf(packetBuffer, "\{\"n\": \"temperature sensor\", \"t\":\"temperature.v1.0\"}");
-  sendPacket(packetBuffer);
+  iotkit.send("{ \"n\": \"temperature\", \"t\": \"temperature.v1.0\"}\n");
 }
 
 void loop()
@@ -83,24 +78,12 @@ void loop()
   Serial.print("Temperature is ");
   Serial.println(temperature);
 
-  // And send it to the agent
-  sprintf(packetBuffer, "\{\"n\": \"temperature sensor\", \"v\":\"%f\"}", temperature);
-  sendPacket(packetBuffer);
+  // Send to enableiot
+  Serial.println("Sending temperature to enableiot.com");
+  iotkit.send("temperature", (double) temperature);
 
   // wait ten seconds before checking again
   delay(10000); 
-}
-
-// send a request to the IoTKit agent, which will be running on our Edison
-unsigned long sendPacket(char* aPacket)
-{
-  IPAddress agent(WiFi.localIP());
-  Udp.beginPacket(agent, 41234); //IoTKit agent listens on 41234
-
-  Serial.println("Sending packet...");
-  Serial.println(aPacket);
-  Udp.write((byte*)aPacket, strlen(aPacket));
-  Udp.endPacket(); 
 }
 
 
